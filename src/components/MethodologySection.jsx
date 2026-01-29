@@ -1,60 +1,111 @@
 import Section from "./Section";
 import imageFour from "../pic/hình4.jpg";
 
+const quickHighlights = [
+  {
+    label: "Nền tảng",
+    value: "Mác – Lênin",
+    detail: "Định hình chuẩn mực quyền lực nhân dân",
+  },
+  {
+    label: "Phương pháp",
+    value: "Biện chứng số",
+    detail: "Lọc ồn thông tin, giữ trục giá trị trung tâm",
+  },
+  {
+    label: "Ứng dụng",
+    value: "Bản sắc Việt",
+    detail: "Gắn triết học với thực tiễn đổi mới",
+  },
+];
+
+const pillars = [
+  {
+    id: "2.1",
+    title: "Quyền lực thuộc về nhân dân",
+    summary:
+      "Thiết kế thể chế phải soi vào lợi ích của đa số lao động và bảo đảm tiếng nói phản biện được lắng nghe.",
+    bullets: [
+      "Giám sát xã hội chủ động, đa tầng",
+      "Chính sách đặt con người làm trung tâm",
+      "Tư duy giai cấp đi cùng nhân văn và công bằng",
+    ],
+  },
+  {
+    id: "2.2",
+    title: "Công cụ phê phán trong kỷ nguyên số",
+    summary:
+      "Năng lực phân tích luận điệu sai lệch phải dựa trên tư duy biện chứng, dữ liệu và đạo đức nghề truyền thông.",
+    bullets: ["Đối chiếu nguồn và bối cảnh", "Giải cấu trúc mâu thuẫn lợi ích"],
+    extras: ["Đối chiếu nguồn", "Phân tích mâu thuẫn", "Giữ nền tảng tư tưởng"],
+    accent: true,
+  },
+  {
+    id: "2.3",
+    title: "Vận dụng sáng tạo bản địa",
+    summary:
+      "Triết học Mác – Lênin kết hợp tư tưởng Hồ Chí Minh giúp chính sách vừa hiện đại vừa gần gũi đời sống.",
+    bullets: [
+      "Liên tục cập nhật thực tiễn phát triển",
+      "Tăng cường đối thoại với thế hệ trẻ",
+    ],
+  },
+];
+
 export default function MethodologySection() {
   return (
     <Section
       eyebrow="Phần 2"
-      title="Phương pháp luận cho nhận thức và hành động"
-      summary="Phép biện chứng duy vật định hướng cách chúng ta phân tích, ra quyết định và đổi mới thực tiễn."
+      title="Trụ cột chính trị – hệ tư tưởng"
+      summary="Nền tảng tư tưởng Mác – Lênin bảo đảm quyền lực thuộc về nhân dân, giữ vững ổn định trên không gian truyền thông số và được vận dụng sáng tạo với bản sắc Việt Nam."
       theme="dusk"
       className="section--immersive section--methodology"
       backgroundImage={imageFour}
-      backgroundOverlay={false}
+      backgroundOverlay={true}
     >
       <div className="methodology-intro">
         <p>
-          Phép biện chứng duy vật định hướng cách xã hội Việt Nam tiếp cận vấn
-          đề phức tạp: quan sát toàn cảnh, phân tích mâu thuẫn và đưa ra quyết
-          sách phù hợp thực tiễn.
+          Tư tưởng lý luận không chỉ là khẩu hiệu mà là khung hành động giúp
+          nhận diện nhu cầu xã hội, bóc tách thông tin sai lệch và chuyển hóa
+          thành chính sách đậm đặc bản sắc Việt.
         </p>
+        <div className="methodology-highlights">
+          {quickHighlights.map((item) => (
+            <article className="methodology-highlights__item" key={item.label}>
+              <small>{item.label}</small>
+              <strong>{item.value}</strong>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
       </div>
       <div className="methodology-grid">
-        <article className="methodology-card">
-          <header>
-            <span>2.1</span>
-            <h3>Phương pháp luận biện chứng</h3>
-          </header>
-          <p>Việc phân tích vấn đề xã hội đòi hỏi phải:</p>
-          <ul>
-            <li>Xem xét sự vật trong mối liên hệ phổ biến.</li>
-            <li>Nhìn nhận quá trình vận động và phát triển của hiện tượng.</li>
-            <li>Đặt quyết sách trong bối cảnh lịch sử – cụ thể.</li>
-          </ul>
-          <p>
-            Nhờ vậy, quá trình hoạch định chính sách tránh được sự nóng vội và
-            khuyến khích cách tiếp cận toàn diện.
-          </p>
-        </article>
-        <article className="methodology-card methodology-card--accent">
-          <header>
-            <span>2.2</span>
-            <h3>Bài học từ thực tiễn đổi mới</h3>
-          </header>
-          <p>
-            Những va vấp đầu thời kỳ đổi mới cho thấy cần vận dụng linh hoạt các
-            nguyên lý triết học, để lý luận gắn với tình hình cụ thể.
-          </p>
-          <div className="methodology-pillars">
-            <p>Nhận thức thống nhất</p>
-            <p>Chính sách linh hoạt</p>
-            <p>Thực tiễn kiểm nghiệm</p>
-          </div>
-          <p>
-            Khi lý luận và thực tiễn cùng đối thoại, triết học trở thành nền
-            tảng định hướng tư duy hành động.
-          </p>
-        </article>
+        {pillars.map((pillar) => (
+          <article
+            key={pillar.id}
+            className={`methodology-card ${pillar.accent ? "methodology-card--accent" : ""}`.trim()}
+          >
+            <header>
+              <span>{pillar.id}</span>
+              <h3>{pillar.title}</h3>
+            </header>
+            <p>{pillar.summary}</p>
+            {pillar.bullets && (
+              <ul>
+                {pillar.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+            )}
+            {pillar.extras && (
+              <div className="methodology-pillars">
+                {pillar.extras.map((item) => (
+                  <p key={item}>{item}</p>
+                ))}
+              </div>
+            )}
+          </article>
+        ))}
       </div>
     </Section>
   );

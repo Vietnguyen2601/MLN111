@@ -365,103 +365,139 @@ main {
   box-shadow: var(--shadow-card);
 }
 
-.section--worldview .section__content {
-  gap: 2.5rem;
+.section--worldview {
+  position: relative;
+  padding: 0;
 }
 
-.worldview-lede {
-  font-size: 1.15rem;
+.section--worldview::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, rgba(7, 3, 2, 0.78), rgba(8, 4, 3, 0.35));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section--worldview .section__grid {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: none;
+  padding: clamp(80px, 14vh, 160px) clamp(24px, 9vw, 140px);
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.section--worldview .section__content {
+  display: block;
+  margin: 0;
+  max-width: 780px;
+  gap: 0;
+}
+
+.section--worldview .section__content > * {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.worldview-atmo {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+.section[data-visible="true"] .worldview-atmo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.worldview-atmo__label {
+  margin: 0 0 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.45em;
+  font-size: 0.82rem;
+  color: rgba(242, 232, 213, 0.72);
+}
+
+.worldview-atmo__title {
+  margin: 0 0 20px;
+  font-size: clamp(3rem, 5.8vw, 4.8rem);
+  line-height: 1.1;
+  font-weight: 600;
+  max-width: 16ch;
+}
+
+.worldview-atmo__lede {
+  margin: 0 0 18px;
+  font-size: 1.3rem;
+  color: rgba(242, 232, 213, 0.92);
   max-width: 60ch;
 }
 
-.worldview-panels {
+.worldview-atmo__note {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(242, 232, 213, 0.78);
+}
+
+@media (max-width: 900px) {
+  .section--worldview .section__grid {
+    flex-wrap: wrap;
+    padding: 80px 24px;
+  }
+
+  .worldview-atmo__label {
+    letter-spacing: 0.3em;
+  }
+}
+
+.worldview-grid {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
 }
 
-.worldview-panel {
-  background: rgba(9, 4, 3, 0.82);
-  padding: 24px;
+.worldview-card {
+  background: rgba(7, 3, 2, 0.78);
   border-radius: var(--radius-md);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-card);
 }
 
-.worldview-panel__badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  margin-bottom: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-}
-
-.worldview-panel h3 {
-  margin: 0 0 12px;
-  font-size: 1.15rem;
-}
-
-.worldview-tags {
-  margin: 16px 0 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.worldview-tags li {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 6px 12px;
-  border-radius: 999px;
-}
-
-.worldview-panel__quote {
-  margin-top: 18px;
-  padding: 14px 16px;
-  border-left: 3px solid var(--color-gold);
-  background: rgba(199, 155, 47, 0.08);
-  font-style: italic;
-}
-
-.worldview-heading {
-  background: rgba(7, 3, 2, 0.82);
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 32px;
-  text-align: right;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
-}
-
-.worldview-heading__eyebrow {
-  margin: 0 0 12px;
+.worldview-card__eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.35em;
-  font-size: 0.75rem;
+  font-size: 0.68rem;
+  margin: 0 0 10px;
   color: rgba(242, 232, 213, 0.65);
 }
 
-.worldview-heading h2 {
-  margin: 0 0 10px;
-  font-size: 2rem;
+.section--methodology {
+  min-height: auto;
+  padding: 80px 0;
 }
 
-.worldview-heading p {
-  margin: 0;
-  color: rgba(242, 232, 213, 0.92);
-  font-size: 1.05rem;
+.section--methodology .section__grid {
+  align-items: flex-start;
+  gap: 24px;
 }
 
 .section--methodology .section__content {
-  gap: 1.8rem;
+  gap: 1.4rem;
+}
+
+.methodology-intro {
+  display: grid;
+  gap: 1.2rem;
 }
 
 .methodology-intro p {
@@ -469,17 +505,51 @@ main {
   font-size: 1.08rem;
 }
 
+.methodology-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.methodology-highlights__item {
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(7, 3, 2, 0.7);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.methodology-highlights__item small {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.7rem;
+  color: rgba(242, 232, 213, 0.7);
+}
+
+.methodology-highlights__item strong {
+  font-size: 1.1rem;
+}
+
+.methodology-highlights__item p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: rgba(242, 232, 213, 0.9);
+}
+
 .methodology-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
 }
 
 .methodology-card {
   background: rgba(8, 4, 3, 0.78);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-md);
-  padding: 24px;
+  padding: 20px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
@@ -487,12 +557,12 @@ main {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .methodology-card header span {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   display: inline-flex;
@@ -504,7 +574,7 @@ main {
 
 .methodology-card header h3 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .methodology-card ul {
@@ -664,6 +734,12 @@ main {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
+}
+
+.section--longterm .section__eyebrow,
+.section--longterm .section__title,
+.section--longterm .section__summary {
+  color: #050505;
 }
 
 .longterm-grid {
@@ -957,3 +1033,4 @@ footer {
     opacity: 1 !important;
   }
 }
+

@@ -5,8 +5,8 @@ export default function ModernEraSection() {
   return (
     <Section
       eyebrow="Phần 4"
-      title="Triết học trước biến đổi thời đại"
-      summary="Cách tiếp cận biện chứng giúp Việt Nam chủ động trước toàn cầu hóa và bùng nổ công nghệ."
+      title="Văn hóa & con người: Giải phóng con người toàn diện"
+      summary="Con người là trung tâm của phát triển; đạo đức xã hội được định hình lại trong kinh tế thị trường; truyền thống và hiện đại được gắn kết bằng tư duy biện chứng."
       theme="dusk"
       className="section--modern section--immersive"
       backgroundImage={imageThree}
@@ -14,19 +14,21 @@ export default function ModernEraSection() {
       mediaPosition="left"
       media={
         <div className="modern-dashboard">
-          <p className="modern-dashboard__title">Chỉ dấu thời đại</p>
+          <p className="modern-dashboard__title">Trục văn hóa</p>
           <dl>
             <div>
-              <dt>Toàn cầu hóa</dt>
-              <dd>Tác động hai chiều, đòi hỏi chọn lọc</dd>
+              <dt>Con người</dt>
+              <dd>Mục tiêu tối thượng của mọi chính sách</dd>
             </div>
             <div>
-              <dt>Công nghệ</dt>
-              <dd>Đổi mới nhanh, cần quản trị xã hội</dd>
+              <dt>Đạo đức</dt>
+              <dd>
+                Nuôi dưỡng trách nhiệm xã hội, chống chủ nghĩa cá nhân cực đoan
+              </dd>
             </div>
             <div>
-              <dt>Nhân lực</dt>
-              <dd>Giữ vai trò chủ thể sáng tạo</dd>
+              <dt>Truyền thống · Hiện đại</dt>
+              <dd>Kế thừa giá trị cội nguồn để đổi mới và hội nhập</dd>
             </div>
           </dl>
         </div>
@@ -35,27 +37,35 @@ export default function ModernEraSection() {
       <div className="modern-content">
         <article>
           <p className="modern-content__eyebrow">4.1</p>
-          <h3>Cách tiếp cận toàn cầu hóa</h3>
+          <h3>Con người là trung tâm</h3>
           <p>
-            Toàn cầu hóa được nhìn nhận như một quá trình thống nhất nhưng đầy
-            mâu thuẫn, chứa cả mặt tích cực lẫn tiêu cực. Nhờ đó Việt Nam chọn
-            chiến lược hội nhập có chọn lọc, phát huy nội lực mà vẫn giữ bản
-            sắc.
+            Triết học Mác – Lênin khẳng định phát triển phải hướng đến giải
+            phóng con người cả vật chất lẫn tinh thần. Mọi chính sách đều nhằm
+            mở rộng năng lực sáng tạo và phẩm giá của mỗi công dân.
           </p>
         </article>
         <article>
           <p className="modern-content__eyebrow">4.2</p>
-          <h3>Khoa học – công nghệ và vai trò con người</h3>
+          <h3>Đạo đức xã hội trong kinh tế thị trường</h3>
           <p>
-            Dù công nghệ phát triển chóng mặt, triết học Mác – Lênin nhấn mạnh
-            rằng con người luôn là trung tâm và chịu trách nhiệm trước hệ quả xã
-            hội của tiến bộ kỹ thuật.
+            Cạnh tranh thị trường đòi hỏi một hệ giá trị mới: đề cao trách nhiệm
+            cộng đồng, tinh thần sẻ chia và cảnh giác với chủ nghĩa cá nhân cực
+            đoan.
           </p>
           <div className="modern-pillars">
-            <span>Đổi mới sáng tạo</span>
-            <span>Quản trị nhân văn</span>
-            <span>Chia sẻ tri thức</span>
+            <span>Trách nhiệm</span>
+            <span>Đoàn kết</span>
+            <span>Liêm chính</span>
           </div>
+        </article>
+        <article>
+          <p className="modern-content__eyebrow">4.3</p>
+          <h3>Biện chứng giữa truyền thống và hiện đại</h3>
+          <p>
+            Tư duy biện chứng giúp xã hội kế thừa giá trị văn hóa dân tộc, đồng
+            thời đổi mới để thích ứng với toàn cầu hóa. Nhờ vậy, bản sắc Việt
+            Nam vẫn được gìn giữ trong khi tiếp thu tinh hoa nhân loại.
+          </p>
         </article>
       </div>
     </Section>

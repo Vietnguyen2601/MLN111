@@ -1,60 +1,62 @@
 import Section from "./Section";
 import imageTwo from "../pic/hinh2.jpg";
 
+const worldviewPoints = [
+  {
+    id: "1.1",
+    title: "Thế giới quan duy vật",
+    body: "Thế giới vật chất tồn tại khách quan, độc lập với ý thức. Nhìn nhận đó giúp xã hội Việt Nam loại bỏ mê tín, duy tâm và thay bằng tư duy thực tế, tỉnh táo trước mọi hiện tượng xã hội.",
+  },
+  {
+    id: "1.2",
+    title: "Quan hệ vật chất – ý thức",
+    body: "Kinh tế và cơ sở vật chất định hình đời sống tinh thần. Bài học phát triển của Việt Nam cho thấy chỉ khi nền kinh tế vững thì văn hóa, giáo dục, khoa học mới bứt phá tương xứng.",
+  },
+  {
+    id: "1.3",
+    title: "Phép biện chứng duy vật",
+    body: "Tư duy biện chứng rèn khả năng phân tích mối liên hệ, vận động và mâu thuẫn. Nhờ đó, chúng ta dung hòa hội nhập với bản sắc, tăng trưởng với công bằng hay truyền thống với hiện đại.",
+  },
+  {
+    id: "1.4",
+    title: "Thực tiễn – tiêu chuẩn chân lý",
+    body: "Mọi lý luận đều phải được thực tiễn kiểm chứng. Tinh thần “dân biết, dân bàn, dân làm, dân giám sát, dân thụ hưởng” bảo đảm chính sách xuất phát từ đời sống và quay trở lại phục vụ nhân dân.",
+  },
+];
+
 export default function WorldviewSection() {
   return (
     <Section
-      title="Triết học Mác – Lênin như nền tảng thế giới quan"
-      summary="Thế giới được nhìn như một chỉnh thể vật chất thống nhất, luôn vận động và gắn với bối cảnh lịch sử cụ thể."
+      title="Phần 1 · Thế giới quan & phương pháp luận"
+      summary="Nền tảng tư duy duy vật và phép biện chứng giúp chúng ta suy nghĩ đúng, làm đúng."
       theme="ember"
       className="section--immersive section--worldview"
       backgroundImage={imageTwo}
       backgroundOverlay={false}
       showHeading={false}
-      media={
-        <div className="worldview-heading">
-          <p className="worldview-heading__eyebrow">Phần 1</p>
-          <h2>Triết học Mác – Lênin như nền tảng thế giới quan</h2>
-          <p>
-            Thế giới được nhìn như một chỉnh thể vật chất thống nhất, luôn vận
-            động và gắn với bối cảnh lịch sử cụ thể.
-          </p>
-        </div>
-      }
     >
-      <p className="worldview-lede">
-        Triết học Mác – Lênin giúp xã hội Việt Nam nhìn hiện thực như một chỉnh
-        thể thống nhất, nơi mọi chuyển động đều gắn với điều kiện vật chất lẫn
-        bối cảnh lịch sử cụ thể.
-      </p>
-      <div className="worldview-panels">
-        <article className="worldview-panel">
-          <span className="worldview-panel__badge">1.1</span>
-          <h3>Thế giới quan duy vật biện chứng</h3>
-          <p>
-            Cách tiếp cận duy vật biện chứng giúp tránh hai cực đoan: tuyệt đối
-            hóa yếu tố tinh thần dẫn đến duy ý chí hoặc nhìn hiện tượng một cách
-            siêu hình, tách rời khỏi mối liên hệ xã hội.
-          </p>
-          <ul className="worldview-tags">
-            <li>Đặt vấn đề vào điều kiện cụ thể</li>
-            <li>Giữ vững tính khách quan</li>
-            <li>Kết nối các mối quan hệ</li>
-          </ul>
-        </article>
-        <article className="worldview-panel">
-          <span className="worldview-panel__badge">1.2</span>
-          <h3>Nhân sinh quan tích cực</h3>
-          <p>
-            Con người vừa là sản phẩm của hoàn cảnh vừa là chủ thể cải biến hoàn
-            cảnh thông qua thực tiễn. Từ đó nuôi dưỡng niềm tin rằng sự phát
-            triển của đất nước đến từ lao động và sáng tạo của nhân dân.
-          </p>
-          <div className="worldview-panel__quote">
-            <p>“Hiểu đúng để hành động đúng.”</p>
-            <span>Định hướng cốt lõi của triết học Mác – Lênin</span>
-          </div>
-        </article>
+      <div className="worldview-atmo">
+        <p className="worldview-atmo__label">Phần 1 · Thế giới quan</p>
+        <h2 className="worldview-atmo__title">
+          Nền tảng tư duy cho nhận thức và hành động
+        </h2>
+        <p className="worldview-atmo__lede">
+          Thế giới quan duy vật và phép biện chứng duy vật cung cấp khung tham
+          chiếu để xã hội Việt Nam nhìn thẳng vào hiện thực, tránh nóng vội, tin
+          vào quy luật khách quan và năng lực cải biến thế giới của chính mình.
+        </p>
+        <p className="worldview-atmo__note">
+          Từ điểm tựa này, mọi quyết sách đều bắt đầu bằng quan sát thực tiễn.
+        </p>
+      </div>
+      <div className="worldview-grid">
+        {worldviewPoints.map((point) => (
+          <article key={point.id} className="worldview-card">
+            <p className="worldview-card__eyebrow">{point.id}</p>
+            <h3>{point.title}</h3>
+            <p>{point.body}</p>
+          </article>
+        ))}
       </div>
     </Section>
   );
