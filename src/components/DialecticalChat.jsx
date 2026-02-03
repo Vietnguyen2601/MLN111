@@ -5,11 +5,33 @@ import InsightCard from "./InsightCard";
 
 export default function DialecticalChat() {
   const [input, setInput] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
+  const sectionRef = useRef(null);
 
   const { messages, isLoading, error, sendMessage, clearChat } =
     useDialecticalChat();
+
+  // Intersection Observer for visibility animation
+  useEffect(() => {
+    const node = sectionRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -5% 0px" }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
 
   // Auto-scroll to bottom
   useEffect(() => {
@@ -33,7 +55,12 @@ export default function DialecticalChat() {
   const isEmpty = messages.length === 0;
 
   return (
-    <section className="dialectical-chat section" id="ai-consultant">
+    <section 
+      ref={sectionRef}
+      className="dialectical-chat section" 
+      id="ai-consultant"
+      data-visible={isVisible}
+    >
       <div className="dialectical-chat__container">
         {/* Header */}
         <header className="dialectical-chat__header">
