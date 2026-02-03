@@ -40,6 +40,9 @@ export default function App() {
             <span>Phương pháp luận đổi mới</span>
             <span>Định hướng chính trị – xã hội</span>
           </div>
+          <a href="#ai-consultant" className="hero__cta">
+            ★ Thử AI Tư Vấn Biện Chứng
+          </a>
         </header>
 
         <IntroSection />
