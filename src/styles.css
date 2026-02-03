@@ -163,6 +163,33 @@ main {
   border-radius: 999px;
 }
 
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, var(--color-deep-red), var(--color-blood-red));
+  border: 2px solid var(--color-imperial-gold);
+  color: var(--color-cream);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(139, 0, 0, 0.4);
+}
+
+.hero__cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 12px 35px rgba(139, 0, 0, 0.5),
+    0 0 30px rgba(212, 175, 55, 0.2);
+}
+
 
 .section {
   min-height: 100vh;
