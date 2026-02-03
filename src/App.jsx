@@ -5,6 +5,7 @@ import PoliticalRoleSection from "./components/PoliticalRoleSection";
 import ModernEraSection from "./components/ModernEraSection";
 import LongTermSection from "./components/LongTermSection";
 import ConclusionSection from "./components/ConclusionSection";
+import DialecticalChat from "./components/DialecticalChat";
 import heroVideo from "./pic/maclenin.mp4";
 
 export default function App() {
@@ -48,6 +49,9 @@ export default function App() {
         <ModernEraSection />
         <LongTermSection />
         <ConclusionSection />
+        
+        {/* AI Dialectical Consultant Section */}
+        <DialecticalChat />
 
         <footer>
           Soạn thảo theo tinh thần triết học Mác – Lênin, sẵn sàng mở rộng với
