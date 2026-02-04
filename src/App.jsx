@@ -8,6 +8,7 @@ import ModernEraSection from "./components/ModernEraSection";
 import LongTermSection from "./components/LongTermSection";
 import ConclusionSection from "./components/ConclusionSection";
 import MiniGame from "./components/MiniGame";
+import DialecticalChat from "./components/DialecticalChat";
 import heroVideo from "./pic/maclenin.mp4";
 import studocuLogo from "./pic/studocu.png";
 import chatgptLogo from "./pic/chatgpt.png";
@@ -195,6 +196,26 @@ export default function App() {
             </footer>
           </>
         )}
+          <a href="#ai-consultant" className="hero__cta">
+            ★ Thử AI Tư Vấn Biện Chứng
+          </a>
+        </header>
+
+        <IntroSection />
+        <WorldviewSection />
+        <MethodologySection />
+        <PoliticalRoleSection />
+        <ModernEraSection />
+        <LongTermSection />
+        <ConclusionSection />
+        
+        {/* AI Dialectical Consultant Section */}
+        <DialecticalChat />
+
+        <footer>
+          Soạn thảo theo tinh thần triết học Mác – Lênin, sẵn sàng mở rộng với
+          hình ảnh và tư liệu.
+        </footer>
       </main>
     </div>
   );
