@@ -144,6 +144,16 @@ export default function App() {
             <LongTermSection />
             <ConclusionSection />
 
+            <section id="ai-consultant" className="ai-consultant">
+              <p className="ai-consultant__eyebrow">Thử AI hỗ trợ lập luận</p>
+              <h2>★ Tư Vấn Biện Chứng</h2>
+              <p>
+                Khai thác trợ lý hội thoại để luyện tập cách lý giải, đặt câu
+                hỏi phản biện và mở rộng dẫn chứng từ nội dung đã trình bày.
+              </p>
+              <DialecticalChat />
+            </section>
+
             <section className="game-cta" aria-labelledby="mini-game-cta">
               <div>
                 <p className="game-cta__eyebrow">
@@ -196,26 +206,6 @@ export default function App() {
             </footer>
           </>
         )}
-          <a href="#ai-consultant" className="hero__cta">
-            ★ Thử AI Tư Vấn Biện Chứng
-          </a>
-        </header>
-
-        <IntroSection />
-        <WorldviewSection />
-        <MethodologySection />
-        <PoliticalRoleSection />
-        <ModernEraSection />
-        <LongTermSection />
-        <ConclusionSection />
-        
-        {/* AI Dialectical Consultant Section */}
-        <DialecticalChat />
-
-        <footer>
-          Soạn thảo theo tinh thần triết học Mác – Lênin, sẵn sàng mở rộng với
-          hình ảnh và tư liệu.
-        </footer>
       </main>
     </div>
   );
