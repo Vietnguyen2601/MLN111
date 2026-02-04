@@ -12,6 +12,7 @@ export default function LongTermSection() {
       className="section--immersive section--longterm"
       backgroundImage={imageOne}
       backgroundOverlay={false}
+      sectionId="section-long-term"
     >
       <div className="longterm-grid">
         <div className="longterm-quote">

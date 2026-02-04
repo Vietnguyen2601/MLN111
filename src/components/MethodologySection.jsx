@@ -62,6 +62,7 @@ export default function MethodologySection() {
       className="section--immersive section--methodology"
       backgroundImage={imageFour}
       backgroundOverlay={true}
+      sectionId="section-methodology"
     >
       <div className="methodology-intro">
         <p>

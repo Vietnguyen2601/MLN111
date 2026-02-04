@@ -8,6 +8,7 @@ export default function ConclusionSection() {
       summary="Triết học Mác – Lênin tiếp tục định hướng phát triển bền vững, nhân văn cho hiện tại và tương lai."
       theme="ember"
       mediaHint={false}
+      sectionId="section-conclusion"
     >
       <p>
         Triết học Mác – Lênin là nền tảng tư duy thống nhất cho mọi cấp độ phát

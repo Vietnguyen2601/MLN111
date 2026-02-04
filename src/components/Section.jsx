@@ -14,6 +14,7 @@ export default function Section({
   className = "",
   style,
   showHeading = true,
+  sectionId,
 }) {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -70,6 +71,7 @@ export default function Section({
 
   return (
     <section
+      id={sectionId}
       ref={sectionRef}
       className={sectionClassName}
       data-visible={isVisible}
