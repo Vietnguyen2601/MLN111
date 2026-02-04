@@ -33,6 +33,7 @@ export default function ModernEraSection() {
           </dl>
         </div>
       }
+      sectionId="section-modern-era"
     >
       <div className="modern-content">
         <article>

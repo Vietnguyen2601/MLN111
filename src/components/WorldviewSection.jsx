@@ -34,6 +34,7 @@ export default function WorldviewSection() {
       backgroundImage={imageTwo}
       backgroundOverlay={false}
       showHeading={false}
+      sectionId="section-worldview"
     >
       <div className="worldview-atmo">
         <p className="worldview-atmo__label">Phần 1 · Thế giới quan</p>

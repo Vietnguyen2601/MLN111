@@ -26,6 +26,7 @@ export default function PoliticalRoleSection() {
       }
       backgroundImage={imageFive}
       backgroundOverlay={false}
+      sectionId="section-political-economy"
     >
       <div className="policy-columns">
         <article>
