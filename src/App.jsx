@@ -133,6 +133,13 @@ export default function App() {
                 <span>Phương pháp luận đổi mới</span>
                 <span>Định hướng chính trị – xã hội</span>
               </div>
+              <button
+                type="button"
+                className="hero__cta"
+                onClick={() => handleNavigate("ai-consultant")}
+              >
+                <span>★</span> Thử AI Tư Vấn Biện Chứng
+              </button>
             </header>
 
             <IntroSection />

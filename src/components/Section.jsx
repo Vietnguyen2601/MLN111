@@ -77,7 +77,6 @@ export default function Section({
       data-visible={isVisible}
       style={styleProp}
     >
-      {eyebrow && <p className="section__eyebrow">{eyebrow}</p>}
       {showHeading && (
         <div
           className="section__heading"
@@ -88,7 +87,10 @@ export default function Section({
         </div>
       )}
       <div className="section__grid">
-        <div className="section__content">{children}</div>
+        <div className="section__content">
+          {eyebrow && <p className="section__eyebrow">{eyebrow}</p>}
+          {children}
+        </div>
         {(media || mediaHint) && (
           <aside className="section__media" aria-label="Không gian hình ảnh">
             {media || (
