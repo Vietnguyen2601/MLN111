@@ -7,6 +7,7 @@ import PoliticalRoleSection from "./components/PoliticalRoleSection";
 import ModernEraSection from "./components/ModernEraSection";
 import LongTermSection from "./components/LongTermSection";
 import ConclusionSection from "./components/ConclusionSection";
+import MembersSection from "./components/MembersSection";
 import MiniGame from "./components/MiniGame";
 import DialecticalChat from "./components/DialecticalChat";
 import heroVideo from "./pic/maclenin.mp4";
@@ -149,6 +150,7 @@ export default function App() {
             <PoliticalRoleSection />
             <ModernEraSection />
             <LongTermSection />
+            <MembersSection />
             <ConclusionSection />
 
             <section id="ai-consultant" className="ai-consultant">
